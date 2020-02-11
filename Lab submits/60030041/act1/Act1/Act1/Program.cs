@@ -28,7 +28,7 @@ class Point
 
     public int Y
     {
-       // get { return y; }
+        get { return y; }
         set { y = value; }
     }
 }
