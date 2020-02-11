@@ -15,7 +15,7 @@ namespace Activity2
             {
                 //su.Name = "My Name";
           
-                su.GPA = 3.25f;
+                su.GPA = 3.26f;
                 Console.WriteLine("Student name : " + su.Name);
                 Console.WriteLine("Student ID   : " + su.ID);
                 Console.WriteLine("Student GPA  : " + su.GPA);
