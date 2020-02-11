@@ -6,7 +6,7 @@ namespace Practices
     {
         static void Main(string[] args)
         {
-            Teacher p = new Person();
+            Student p = new Professor();
             p.SayHi();
             Console.ReadKey();
         }
