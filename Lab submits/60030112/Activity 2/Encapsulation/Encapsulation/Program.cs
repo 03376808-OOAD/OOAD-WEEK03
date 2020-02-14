@@ -61,4 +61,29 @@ namespace Encapsulation
             }
         }
     }
+    class TraineeStudent
+    {
+        private string StudentID;
+        private float salary;
+
+        public TraineeStudent(string stdID,float sal)
+        {
+            this.StudentID = stdID;
+            if (sal >= 300 && sal <= 450)
+            {
+                this.salary = sal;
+            }
+            else throw (new Exception("Error!! Invalid Salary Amount"));
+        }
+
+        public float getSalary()
+        {
+            return this.salary;
+        }
+
+        public string getStudentID()
+        {
+            return this.StudentID;
+        }
+    }
 }
