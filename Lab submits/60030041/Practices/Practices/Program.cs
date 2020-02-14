@@ -4,22 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Act4_03
+namespace Practices
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Person p = new Person();
-            p.SayHi();
-            Student s = new Student();
-            s.SayHi();
-            Person sp = new Student();
-            sp.SayHi();
-            Teacher t = new Teacher();
+            Person t = new Person();
             t.SayHi();
-            Person tp = new Teacher();
-            tp.SayHi();
             Console.ReadKey();
         }
     }
@@ -45,5 +37,12 @@ class Teacher : Person
     public new void SayHi()
     {
         Console.WriteLine("Hi I'm a teacher");
+    }
+}
+class Professor : Teacher
+{
+    public new void SayHi()
+    {
+        Console.WriteLine("Hi I'm a Professor");
     }
 }

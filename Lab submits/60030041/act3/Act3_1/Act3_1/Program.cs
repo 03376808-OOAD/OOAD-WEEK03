@@ -43,6 +43,7 @@ class Teacher
     private string name;
     protected float billingRate;
 }
+
 class Professor : Teacher
 {
     private float emolument;  // เงินประจำตำแหน่ง
