@@ -6,39 +6,43 @@ namespace Lab3_Pratices
     {
         static void Main(string[] args)
         {
-            Person t = new Teacher();
-            t.SayHi();
+            TraineeStudent s = new TraineeStudent("60030098");
+            try
+            {
+                s.getSalary = 470;
+                Console.WriteLine("Your StudentID is : " + s.getStudentID);
+                Console.WriteLine("Your Salary is : " + s.getSalary);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadKey();
         }
     }
-    class Person
+    class TraineeStudent
     {
-        public virtual void SayHi()
-        {
-            Console.WriteLine("Hi I'm a person");
-        }
-    }
+        private string id;
+        private int sa;
 
-    class Student : Person
-    {
-        public override void SayHi()
+        public TraineeStudent (string StudentID)
         {
-            Console.WriteLine("Hi I'm a student");
+            this.id = StudentID;
         }
-    }
-
-    class Teacher : Person
-    {
-        public override void SayHi()
+        public string getStudentID
         {
-            Console.WriteLine("Hi I'm a teacher");
+            get { return id; }
         }
-    }
-    class Professor : Teacher
-    {
-        public new void SayHi()
+        public int getSalary
         {
-            Console.WriteLine("Hi I'm a Professor");
+            get { return sa; }
+            set
+            {
+                if (value > 300 && value <= 450)
+                    sa = value;
+                else
+                    throw (new Exception("Invalid salary !!!"));
+            }
         }
     }
 }
