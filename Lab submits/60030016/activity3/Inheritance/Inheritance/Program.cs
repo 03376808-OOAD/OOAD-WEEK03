@@ -37,4 +37,5 @@ namespace Inheritance
         private string name;
         protected float billingRate;
     }
+
 }
